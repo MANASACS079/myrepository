@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vidhya Jyoyhi English High School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #0056b3;
+}
+
+/* Navigation Buttons Styling */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: #108ae8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Vidhya Jyoyhi English High School</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"  href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    
+    <form name = "form" onsubmit="return validation()">
+        <h1>Registration Form</h1>
+
+        <label for ="name">Name</label><br>
+        <input type = "text" id = "Name" name = "Name"><br>
+
+        <label for ="USnno">USN Number</label><br>
+        <input type = "text" id = "USNno" name = "USNno"><br>
+
+        <label for ="mobile">Mobile Number</label><br>
+        <input type = "text" id = "mobile" name = "mobile"><br>
+
+        <label for ="mail">Mail ID</label><br>
+        <input type = "email" id = "mail" name = "mail"><br>
+
+        <label for ="password">Password</label><br>
+        <input type = "password" id = "password" name = "password"><br>
+
+        <label for ="country">Country</label><br>
+        <select id = "country" name = "country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Nepal">Nepal</option>
+            <option value="SriLanka">Sri Lanka</option>
+        </select><br>
+
+        <label for ="course">Course</label><br>
+        <input type = "text" id = "course" name = "course"><br>
+
+        <label for ="address">Address</label><br>
+        <textarea name = "address" id = "address" name = "address"></textarea><br>
+
+        <button type = "submit">Submit</button>
+        <button type = "reset">Reset</button>
+        <br>
+        <br>
+        <hr>
+        <div class="nav-buttons">
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn">Next</button>
+      </div>
+    
+    </form>
+    <script>
+        function validation()
+        {
+            var name = document.forms['form']['name'].value;
+            var USNno = document.forms['form']['USNno'].value;
+            var mobile = document.forms['form']['mobile'].value;
+            var mail = document.forms['form']['mail'].value;
+            var password = document.forms['form']['password'].value;
+            var country = document.forms['form']['country'].value;
+            var course = document.forms['form']['course'].value;
+            var address = document.forms['form']['address'].value;
+            if(name==''||USNno==''||mail==''||mobile==''||password==''|| country == ''|| course==''||address=='')
+            {
+                alert("All the fields are mandatory")
+                return false;
+            }
+            else if(mobile.length !=10 || isNaN(mobile))
+            {
+                alert("mobile number should be exactly 10 digits")
+                return false;
+            }
+            else if(password.length<6)
+            {
+                alert("password must be atleast 6 characters")
+                return false;
+            }
+            else if(!/(?=.\d)(?=.[a-zA-Z])(?=.*[0-9a-zA-Z])/.test(password))
+            {
+                alert('password must contain atleast one char,one symbol and one digit!')
+                return false;
+            }
+            
+            return true;
+        }
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
